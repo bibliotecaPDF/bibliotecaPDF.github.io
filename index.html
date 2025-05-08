@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-<title>Biblioteca PDF</title>
+<title>BiblioAntología</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-title" content="Biblioteca PDF" />
+<meta name="apple-mobile-web-app-title" content="BiblioAntología" />
 <meta name="generator" content="VisualNEO Web (19.9.16)" />
-<meta name="date" content="2024-09-07 20:18" />
+<meta name="date" content="2025-05-08 17:43" />
+<meta name="version" content="1.0" />
+<meta name="copyright" content="Copyright 2025 IoSoft Producciones" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/nzAnimate.min.css">
@@ -21,22 +23,25 @@
 <div ng-controller="NeoApp_CoreCtrl" ng-view ng-cloak id="ng-view" class="app-viewport[NAB._pageEffect]"></div>
 <script type="text/ng-template" id="Consulta1">
 <div id="Consulta1">
-<div id="pie" class="[NAB.pie_effect]" ng-style="NAB.pie_style" ng-hide="NAB.pie_hidden" ng-disabled="NAB.pie_disabled"><div align="center">©&nbsp;&nbsp;2024&nbsp;&nbsp;<a href="https://iosoft2022.github.io" target="_blank">IoSoft Producciones</a></div>
+<div id="Ficha" class="[NAB.Ficha_effect]" ng-style="NAB.Ficha_style" ng-hide="NAB.Ficha_hidden" ng-disabled="NAB.Ficha_disabled"><span ng-repeat="object in mydata | filter:searchText | orderBy: 'titulo'">
+<div class="panel-body" style="background:#f3f3f3;">
+<div><br>
+<font size="4">
+&nbsp;&nbsp;&nbsp;<strong>[object.titulo]</strong></font>&nbsp;&nbsp;<font size="3">([object.fecha])</font><br>
+<font size="3">
+&nbsp;&nbsp;&nbsp;MATERIAS: <font color="brown">[object.temas]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/btn.png" height="40"><a href="[object.enlace]" target="_blank"><strong>Leer&nbsp;/&nbsp;Descargar</strong></a>
+</font></div></div><br>
+</span>
+</div>
+<div id="pie" class="[NAB.pie_effect]" ng-style="NAB.pie_style" ng-hide="NAB.pie_hidden" ng-disabled="NAB.pie_disabled"><div align="center">©&nbsp;&nbsp;2025&nbsp;&nbsp;<a href="https://iosoft2022.github.io" target="_blank">IoSoft Producciones</a></div>
 </div>
 <svg id="SVGicon1" viewBox="-10 -10 525 525"  class="[NAB.SVGicon1_effect]" ng-style="NAB.SVGicon1_style" ng-hide="NAB.SVGicon1_hidden" ng-disabled="NAB.SVGicon1_disabled"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
 <div id="titulo" class="[NAB.titulo_effect]" ng-style="NAB.titulo_style" ng-hide="NAB.titulo_hidden" ng-disabled="NAB.titulo_disabled">[categoria]</div>
 <select id="selcat" ng-model="$root.categoria" class="[NAB.selcat_effect]" ng-style="NAB.selcat_style" ng-hide="NAB.selcat_hidden" ng-disabled="NAB.selcat_disabled" ng-change="selcat_change()"><option style="display:none" value="">&nbsp;</option><option>Bibliotecología. Ciencias de la información</option><option>Automatización. Software de gestión</option><option>Bibliografía y fuentes de información</option><option>Bibliotecarios</option><option>Bibliotecas escolares y públicas</option><option>Bibliotecas universitarias y especializadas</option><option>Catalogación</option><option>Clasificación e indización</option><option>Documentación</option><option>Historia del libro</option><option>Procesos técnicos</option><option>Repositorio UNAM</option><option>Tesauros</option><option>Misceláneas</option></select>
-<div id="header" class="[NAB.header_effect]" ng-style="NAB.header_style" ng-hide="NAB.header_hidden" ng-disabled="NAB.header_disabled"><div>&nbsp;&nbsp;<img src="img/logo.png" height="70"><font color="#f2f4f4" size="5">&nbsp;Biblioteca <strong>PDF</strong></font></div>
+<div id="header" class="[NAB.header_effect]" ng-style="NAB.header_style" ng-hide="NAB.header_hidden" ng-disabled="NAB.header_disabled"><div align="center">
+<img src="img/logo.png" height="60">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#f2f4f4" size="5">Biblioteca</font>&nbsp;&nbsp;&nbsp;<font color="#FCF3CF" size="6">020</font>
 </div>
-<div id="Ficha" class="[NAB.Ficha_effect]" ng-style="NAB.Ficha_style" ng-hide="NAB.Ficha_hidden" ng-disabled="NAB.Ficha_disabled"><span ng-repeat="object in mydata | filter:searchText | orderBy: 'titulo'">
-<div class="panel-body" style="background:#f3f3f3;">
-<div>
-<font size="4">
-&nbsp;&nbsp;&nbsp;&nbsp;[object.titulo]<br></font>
-<font size="3">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="[object.enlace]" target="_blank"><strong>(LEER)</strong></a>
-</font></div></div><br>
-</span>
 </div>
 <div id="buscador" class="[NAB.buscador_effect]" ng-style="NAB.buscador_style" ng-hide="NAB.buscador_hidden" ng-disabled="NAB.buscador_disabled"><div align="center"><br><input class="css-input" placeholder="Buscar..." type="text" ng-model="searchText">
 </div>
