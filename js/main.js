@@ -8,6 +8,8 @@ $scope.mysub = function() {$App.total = ArrayLen($App.mydata);
 $App.total = $App.total-1;
 $App.titulo = $App.mydata[$App.current].titulo;
 $App.enlace = $App.mydata[$App.current].enlace;
+$App.fecha = $App.mydata[$App.current].fecha;
+$App.temas = $App.mydata[$App.current].temas;
 $scope.Refresh();};
 $scope.Consulta1_pageenter = function() {$App.current = 1;
 $App.tablaOrigen = "https://docs.google.com/spreadsheets/d/1sx--EkqE4cIPXYppaFyr2mEIqJclW_pkMCIls-VibJA/edit?gid=0#gid=0";
@@ -29,7 +31,7 @@ neoGSheetsLoad($App.tablaOrigen,"mydata","",$scope.mysub);
 } else {
 };
 if ($App.categoria == "Automatización. Software de gestión") {
-$App.tablaOrigen = "https://docs.google.com/spreadsheets/d/16U996NzXHsD8jWqRbaSBfJiqaMkbhg2WsI7GTZizoUk/edit?gid=0#gid=0";
+$App.tablaOrigen = " https://docs.google.com/spreadsheets/d/16U996NzXHsD8jWqRbaSBfJiqaMkbhg2WsI7GTZizoUk/edit?gid=0#gid=0";
 neoGSheetsLoad($App.tablaOrigen,"mydata","",$scope.mysub);
 
 } else {
